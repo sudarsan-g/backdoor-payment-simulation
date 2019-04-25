@@ -159,6 +159,12 @@
         applicationHiddenElement.setAttribute("id", "application");
         paymentForm.appendChild(applicationHiddenElement);
         
+        var configKeyHiddenElement = document.createElement('input');
+        configKeyHiddenElement.setAttribute("type", "hidden");
+        configKeyHiddenElement.setAttribute("name", "configKey");
+        configKeyHiddenElement.setAttribute("id", "configKey");
+        paymentForm.appendChild(configKeyHiddenElement);
+        
         var orderIdfield = document.createElement('input');
         orderIdfield.setAttribute("type", "hidden");
         orderIdfield.setAttribute("name", "orderId");
@@ -203,6 +209,7 @@
         document.getElementById('orderId').setAttribute('value', document.getElementById('orderId-for-backdoor-payment-form').value);
         document.getElementById('stageName').setAttribute('value', document.getElementById('stageName-for-backdoor-payment-form').value);
         document.getElementById('hashData').setAttribute('value', document.getElementById('hashData-for-backdoor-payment-form').value);
+        document.getElementById('configKey').setAttribute('value', document.getElementById('configkey-for-backdoor-payment-form').value);
     
 
         // Submit the payment form
